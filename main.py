@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+
+from flask import Flask, render_template, abort, redirect, sessions, url_for
 # from flask_parameter_validation import ValidateParameters, Route, Json, Query
 # from datetime import datetime
 
@@ -14,14 +15,16 @@ def hello():
     return "<h2>Para empezar</h2>"
 
 
-# @app.route("/<string:name>/")
-# def say_hello(name):
-#     return f"What's so matter {name}!"
-@app.route("/login")
-@app.route("/login/<variable>")
-# @ValidateParameters()
-def login(variable=None):
-    return render_template("index.html", name=variable)
+@app.route('/logeo')
+def test():   
+    name = "Este si es valor"
+    return render_template("index.html", name=name)
+
+@app.route('/logout')
+def logout():
+    # remove the username from the session if it's there
+    
+    return 'This is other thing'
 
 if __name__ == "__main__":
     app.run()
