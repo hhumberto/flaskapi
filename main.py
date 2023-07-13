@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "<h2>Para empezar</h2>"
 
 
 @app.route("/<string:name>/")
 def say_hello(name):
-    return f"Hello {name}!"
+    return f"What's so matter {name}!"
 
 
 if __name__ == "__main__":
