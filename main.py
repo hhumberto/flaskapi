@@ -12,7 +12,7 @@ def not_found(error):
 
 @app.route("/")
 def hello():
-    return "<h2>Para empezar</h2>"
+    return "<h2>Para empezar CON GITHUB</h2>"
 
 
 @app.route('/logeo')
